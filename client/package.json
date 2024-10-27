@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "vite": "^5.4.10"
-  },
   "name": "client",
   "version": "1.0.0",
   "main": "index.js",
@@ -13,5 +10,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "vite": "^5.4.10"
+  }
 }
