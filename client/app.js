@@ -19,9 +19,8 @@ async function handleSubmit(event) {
 form.addEventListener("submit", handleSubmit);
 
 async function getWatchtv() {
-  const response = await fetch(
-    "https://watchtv-wk4-assignment-client.onrender.com/"
-  );
+  const response = await fetch();
+  ("https://watchtv-wk4-assignment-server.onrender.com/");
   const watchtv = await response.json();
 
   //
@@ -35,3 +34,7 @@ async function getWatchtv() {
   }
 }
 getWatchtv();
+
+//https://watchtv-wk4-assignment-server.onrender.com
+//  ("https://watchtv-wk4-assignment-client.onrender.com/");
+//("http://localhost:8080/watchtv"

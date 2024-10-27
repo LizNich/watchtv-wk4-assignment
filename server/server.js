@@ -30,7 +30,7 @@ app.post("/watchtv", async function (request, response) {
     "INSERT INTO watchtv (username, message) VALUES ($1, $2)",
     [username, message]
   );
-  response.json({ status: "Message inserted successfully" });
+  response.json(result);
 });
 
 app.listen(8080, function () {
