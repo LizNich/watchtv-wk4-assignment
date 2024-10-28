@@ -7,11 +7,15 @@ async function handleSubmit(event) {
   const formData = new FormData(form);
   const formObj = Object.fromEntries(formData);
 
-  const response = await fetch("http://localhost:8080/watchtv", {
-    method: "POST",
-    body: JSON.stringify(formObj),
-    headers: { "Content-Type": "application/json" },
-  });
+  //const response = await fetch("http://localhost:8080/watchtv", {
+  const response = await fetch(
+    "https://watchtv-wk4-assignment-server.onrender.com/",
+    {
+      method: "POST",
+      body: JSON.stringify(formObj),
+      headers: { "Content-Type": "application/json" },
+    }
+  );
   const data = await response.json();
   console.log(data);
 }
@@ -19,9 +23,15 @@ async function handleSubmit(event) {
 form.addEventListener("submit", handleSubmit);
 
 async function getWatchtv() {
-  const response = await fetch();
-  ("https://watchtv-wk4-assignment-server.onrender.com/");
+  const response = await fetch(
+    "https://watchtv-wk4-assignment-server.onrender.com/"
+  );
   const watchtv = await response.json();
+
+  // async function getWatchtv() {
+  // const response = await fetch();
+  // ("https://watchtv-wk4-assignment-server.onrender.com/");
+  //const watchtv = await response.json();
 
   //
   for (let i = 0; i < watchtv.length; i++) {
