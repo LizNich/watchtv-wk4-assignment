@@ -8,14 +8,11 @@ async function handleSubmit(event) {
   const formObj = Object.fromEntries(formData);
 
   //const response = await fetch("http://localhost:8080/watchtv", {
-  const response = await fetch(
-    "https://watchtv-wk4-assignment-server.onrender.com/",
-    {
-      method: "POST",
-      body: JSON.stringify(formObj),
-      headers: { "Content-Type": "application/json" },
-    }
-  );
+  const response = await fetch("http://localhost:8080/watchtv", {
+    method: "POST",
+    body: JSON.stringify(formObj),
+    headers: { "Content-Type": "application/json" },
+  });
   const data = await response.json();
   console.log(data);
 }
