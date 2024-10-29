@@ -68,10 +68,10 @@ button:active {
 
 .watchtv-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
   align-items: left;
   padding: 6px 20px;
-  border: 2px solid rgb(97, 18, 18);
+  border: 2px solid rgb(196, 33, 180);
 }
