@@ -7,20 +7,30 @@ async function handleSubmit(event) {
   const formData = new FormData(form);
   const formObj = Object.fromEntries(formData);
 
-  const response = await fetch("http://localhost:8080/watchtv", {
-    method: "POST",
-    body: JSON.stringify(formObj),
-    //was (data)
-    headers: { "Content-Type": "application/json" },
-  });
+  // LN_note: address must inc "/watchtv"
+  const response = await fetch(
+    "https://watchtv-wk4-assignment-server.onrender/watchtv.com",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }
+  );
   const reply = await response.json();
-  console.log(reply);
 }
+
+form.addEventListener("submit", (event) => {
+  handleSubmit(event);
+  form.reset();
+  getTask();
+});
+
 form.addEventListener("submit", handleSubmit);
 
+// LN_note: address doesn't inc "/watchtv"
 async function getWatchtv() {
   const response = await fetch(
-    "https://watchtv-wk4-assignment-server.onrender.com/"
+    "https://watchtv-wk4-assignment-server.onrender.com"
   );
   const watchtv = await response.json();
 
@@ -33,4 +43,4 @@ async function getWatchtv() {
     watchtvContainer.appendChild(p);
   }
 }
-getWatchtv();
+//getWatchtv();
