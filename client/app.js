@@ -1,5 +1,7 @@
 const watchtvContainer = document.getElementById("watchtv-container");
 const form = document.querySelector("form");
+//const API_URL = "http://localhost:8080";
+const API_URL = "https://watchtv-wk4-assignment-server.onrender";
 
 async function handleSubmit(event) {
   event.preventDefault();
@@ -7,30 +9,27 @@ async function handleSubmit(event) {
   const formObj = Object.fromEntries(formData);
 
   // LN_note: address inc "/watchtv"
-  const response = await fetch(
-    "https://watchtv-wk4-assignment-server.onrender/watchtv.com",
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formObj),
-    }
-  );
+  const response = await fetch(`${API_URL}/watchtv`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formObj),
+  });
   const reply = await response.json();
 }
 
 form.addEventListener("submit", (event) => {
   handleSubmit(event);
   form.reset();
-  getTask();
+  getWatchtv();
 });
 
 //form.addEventListener("submit", handleSubmit);
 
 // LN_note: address doesn't inc "/watchtv"
 async function getWatchtv() {
-  const response = await fetch(
-    "https://watchtv-wk4-assignment-server.onrender.com"
-  );
+  watchtvContainer.innerHTML = "";
+  const response = await fetch(`${API_URL}/watchtv`);
+
   const watchtv = await response.json();
 
   for (let i = 0; i < watchtv.length; i++) {

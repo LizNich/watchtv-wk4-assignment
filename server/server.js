@@ -26,7 +26,7 @@ app.get("/watchtv", async function (req, res) {
 
 // post
 app.post("/watchtv", async function (request, response) {
-  const { username, message } = req.body;
+  const { username, message } = request.body;
   const result = await db.query(
     "INSERT INTO watchtv (username, message) VALUES ($1, $2)",
     [username, message]
