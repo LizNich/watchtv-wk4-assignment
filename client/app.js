@@ -3,11 +3,10 @@ const form = document.querySelector("form");
 
 async function handleSubmit(event) {
   event.preventDefault();
-
   const formData = new FormData(form);
   const formObj = Object.fromEntries(formData);
 
-  // LN_note: address must inc "/watchtv"
+  // LN_note: address inc "/watchtv"
   const response = await fetch(
     "https://watchtv-wk4-assignment-server.onrender/watchtv.com",
     {
@@ -30,7 +29,7 @@ form.addEventListener("submit", handleSubmit);
 // LN_note: address doesn't inc "/watchtv"
 async function getWatchtv() {
   const response = await fetch(
-    "https://watchtv-wk4-assignment-server.onrender.com"
+    "https://watchtv-wk4-assignment-server/watchtv.onrender.com"
   );
   const watchtv = await response.json();
 
