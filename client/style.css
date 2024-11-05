@@ -61,6 +61,7 @@ button {
   padding: 6px 20px;
   background-color: grey;
   font-size: 1vw;
+  margin-top: 5px;
 }
 button:active {
   transform: scale(0.9);

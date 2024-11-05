@@ -12,7 +12,7 @@ async function handleSubmit(event) {
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify(formObj),
     }
   );
   const reply = await response.json();
@@ -24,12 +24,12 @@ form.addEventListener("submit", (event) => {
   getTask();
 });
 
-form.addEventListener("submit", handleSubmit);
+//form.addEventListener("submit", handleSubmit);
 
 // LN_note: address doesn't inc "/watchtv"
 async function getWatchtv() {
   const response = await fetch(
-    "https://watchtv-wk4-assignment-server/watchtv.onrender.com"
+    "https://watchtv-wk4-assignment-server.onrender.com"
   );
   const watchtv = await response.json();
 
@@ -42,4 +42,4 @@ async function getWatchtv() {
     watchtvContainer.appendChild(p);
   }
 }
-//getWatchtv();
+getWatchtv();
