@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin-left: 2%;
   margin-top: 0px;
-  color: white;
   font-family: sans-serif;
 }
 
@@ -13,33 +12,25 @@ body {
   justify-content: left;
   align-items: left;
   background-color: rgb(17, 16, 44);
+  color: white;
 }
 
 h1 {
-  font-size: 2.5vw;
-  margin-top: 20px;
+  font-size: 2vw;
+  margin-top: 5px;
 }
 em {
-  font-size: 2.5vw;
-}
-
-p {
   font-size: 1.5vw;
 }
 
-h2 {
-  font-size: 1.25vw;
-  margin-top: 20px;
-  margin-bottom: 0px;
+p {
+  font-size: 1.1vw;
 }
 
-#messageForm {
-  border: 3px solid #168018;
-  padding: 10px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 700px;
-  box-sizing: border-box;
+h2 {
+  font-size: 1vw;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 input {
@@ -49,7 +40,7 @@ input {
   border: 2px solid grey;
   border-radius: 4px;
   color: black;
-  font-size: 1.25vw;
+  font-size: 1vw;
 }
 
 button {
@@ -58,18 +49,30 @@ button {
   background-color: grey;
   font-size: 1vw;
   margin-top: 5px;
+  color: white;
 }
 button:active {
   transform: scale(0.9);
 }
 
-#watchtv-container {
-  margin-top: 5px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  border: 3px solid #760969;
-  padding: 10px;
+#messageForm {
+  border: 3px solid #168018;
+  padding: 5px;
   border-radius: 10px;
+  width: 90%;
   max-width: 700px;
+}
+
+#watchtv-container {
+  border: 3px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+  margin-top: 5px;
+  background-color: rgb(142, 163, 188);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }

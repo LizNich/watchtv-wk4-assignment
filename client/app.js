@@ -34,7 +34,7 @@ async function getWatchtv() {
     const username = watchtv[i].username;
     const message = watchtv[i].message;
     const p = document.createElement("p");
-    p.textContent = `${username} recommends ${message}`;
+    p.textContent = `${username} recommends... ${message}`;
 
     watchtvContainer.appendChild(p);
   }
