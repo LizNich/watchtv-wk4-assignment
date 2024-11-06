@@ -8,9 +8,9 @@ import dotenv from "dotenv";
 const app = express();
 app.use(cors());
 app.use(express.json());
-dotenv.config(); // link to .env
+dotenv.config();
 
-// Set up DB connection - link in the .env
+// Set up DB connection - link in the .env.
 const db = new pg.Pool({ connectionString: process.env.DATABASE_URL });
 
 // ROOT ROUTES //
