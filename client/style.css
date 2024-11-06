@@ -67,12 +67,13 @@ button:active {
   transform: scale(0.9);
 }
 
-.watchtv-container {
+#watchtv-container {
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: left;
-  align-items: left;
-  padding: 6px 20px;
-  border: 2px solid rgb(196, 33, 180);
+  border: 3px solid #760969;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 700px;
 }

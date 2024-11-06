@@ -8,7 +8,6 @@ async function handleSubmit(event) {
   const formData = new FormData(form);
   const formObj = Object.fromEntries(formData);
 
-  // LN_note: address inc "/watchtv"
   const response = await fetch(`${API_URL}/watchtv`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -25,7 +24,6 @@ form.addEventListener("submit", (event) => {
 
 //form.addEventListener("submit", handleSubmit);
 
-// LN_note: address doesn't inc "/watchtv"
 async function getWatchtv() {
   watchtvContainer.innerHTML = "";
   const response = await fetch(`${API_URL}/watchtv`);
