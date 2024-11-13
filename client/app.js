@@ -1,7 +1,8 @@
 const watchtvContainer = document.getElementById("watchtv-container");
 const form = document.querySelector("form");
 //const API_URL = "http://localhost:8080";
-const API_URL = "https://watchtv-wk4-assignment-server.onrender";
+const API_URL = "https://watchtv-wk4-assignment-server.onrender.com";
+//Note: make sure urls match! (was missing .com)
 
 async function handleSubmit(event) {
   event.preventDefault();
