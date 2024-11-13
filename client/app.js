@@ -23,8 +23,6 @@ form.addEventListener("submit", (event) => {
   getWatchtv();
 });
 
-//form.addEventListener("submit", handleSubmit);
-
 async function getWatchtv() {
   watchtvContainer.innerHTML = "";
   const response = await fetch(`${API_URL}/watchtv`);
